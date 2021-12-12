@@ -26,6 +26,15 @@ class App {
 			const light = new HemisphericLight('light', new Vector3(0, 1, 0), scene);
 
 			const box = MeshBuilder.CreateBox('box', {});
+			const ground = MeshBuilder.CreateGround(
+				'ground',
+				{
+					width: 10,
+					height: 10,
+				},
+				scene
+			);
+			box.position.y = 0.5;
 
 			return scene;
 		};
